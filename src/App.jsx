@@ -8,7 +8,7 @@ export default class App extends preact.Component {
       <div>
         <h4>Preact + Prop-Types</h4>
         <Button label="Test Button" />
-        <Button label="Extra Test Button" />
+        <Button label={`NODE_ENV: '${process.env.NODE_ENV}'`} />
       </div>
     );
   }
