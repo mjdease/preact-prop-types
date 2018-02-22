@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --watch & http-server",
+    "dev": "webpack --watch & http-server",
+    "prod": "NODE_ENV=production webpack --watch --define process.env.NODE_ENV=\"'production'\" & http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,11 +22,13 @@
   "devDependencies": {
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
+    "babel-plugin-transform-react-remove-prop-types": "github:mjdease/babel-plugin-transform-react-remove-prop-types#feature/preact-compatibility",
     "babel-preset-env": "1.6.1",
     "babel-preset-react": "6.24.1",
     "http-server": "0.11.1",
     "preact": "8.2.7",
     "prop-types": "15.6.0",
+    "react-style-proptype": "3.2.0",
     "webpack": "3.11.0"
   }
 }

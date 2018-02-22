@@ -7,8 +7,8 @@ export default class App extends preact.Component {
     return (
       <div>
         <h4>Preact + Prop-Types</h4>
-        <Button label="Test Button" />
-        <Button label={`NODE_ENV: '${process.env.NODE_ENV}'`} />
+        <Button label="Test Button" style={{throwsPropTypeError: true}} />
+        <Button label={`NODE_ENV: '${process.env.NODE_ENV}'`} style={{color: '#f00'}} />
       </div>
     );
   }
